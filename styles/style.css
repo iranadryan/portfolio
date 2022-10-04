@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1A1A40;
+  font-size: 16px;
+  font-family: "Fira Code", monospace;
+  color: #D1D1D9;
+}
+
+.content {
+  max-width: 992px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.menu {
+  align-self: center;
+  margin: 56px 0 120px;
+}
+.menu .menu__item {
+  font-weight: 600;
+  color: #D1D1D9;
+  text-decoration: none;
+  position: relative;
+}
+.menu .menu__item + .menu__item {
+  margin-left: 64px;
+}
+.menu .menu__item::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: #D1D1D9;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in, bottom 0.3s ease-in-out;
+}
+.menu .menu__item:hover::after {
+  opacity: 1;
+  bottom: -12px;
+}
+
+.hero .hero__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  font-weight: 400;
+}
+.hero .hero__title .marked-text {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+  position: relative;
+}
+.hero .hero__title .marked-text::after {
+  content: "";
+  width: 308px;
+  height: 16px;
+  background: #7A0BC0;
+  position: absolute;
+  bottom: 8px;
+  left: -12px;
+  z-index: -1;
+}
+.hero .hero__actions {
+  margin-top: 24px;
+  display: flex;
+}
+.hero .hero__actions .hero__button {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 32px;
+  border: 1px solid #D1D1D9;
+  border-radius: 8px;
+  color: #D1D1D9;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.hero .hero__actions .hero__button:hover {
+  background: #3A3A73;
+  color: #FFFFFF;
+}
+.hero .hero__actions .hero__button + .hero__button {
+  margin-left: 12px;
+}
+.hero .hero__actions .hero__button i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+main {
+  margin-top: 40px;
+}
+main .section-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  position: relative;
+}
+main .section-title::after {
+  content: "";
+  height: 16px;
+  background: #7A0BC0;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+}
+main section {
+  margin-top: 80px;
+}
+
+#about .section-title::after {
+  width: 248px;
+}
+#about .about__text {
+  margin-top: 40px;
+  line-height: 24px;
+}
+#about .about__text + .about__text {
+  margin-top: 16px;
+}
+#about .about__skills-title {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FA58B6;
+}
+#about .about__skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 20px;
+  margin-top: 32px;
+}
+#about .skill .skill__header {
+  display: flex;
+  justify-content: space-between;
+}
+#about .skill .skill__header .skill__header__tech {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+#about .skill .skill__header .skill__header__tech i {
+  font-size: 32px;
+  margin-right: 8px;
+  color: #FA58B6;
+}
+#about .skill .skill__progressbar {
+  width: 100%;
+  height: 4px;
+  background: #D1D1D9;
+  margin-top: 20px;
+}
+#about .skill .skill__progressbar .skill__progressbar__bar {
+  height: 4px;
+  background: #FA58B6;
+}
+
+#career .section-title::after {
+  width: 368px;
+}
+#career .career__timeline {
+  width: 100%;
+  height: 2px;
+  background: #D1D1D9;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#career .career__timeline .career__timeline__point {
+  height: 20px;
+  width: 20px;
+  background: #1A1A40;
+  border: 3px solid #D1D1D9;
+  border-radius: 999px;
+  cursor: pointer;
+}
+#career .career__timeline .career__timeline__point.active {
+  background: #FA58B6 !important;
+}
+#career .career__job {
+  margin-top: 32px;
+}
+#career .career__job .job__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#career .career__job .company {
+  display: flex;
+  flex-direction: column;
+}
+#career .career__job .company .company__position {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+#career .career__job .company .company__name {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(209, 209, 217, 0.75);
+}
+#career .career__job .time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#career .career__job .time .time__title {
+  color: #FA58B6;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+#career .career__job .time .time__title i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+#career .career__job .job__description {
+  margin-top: 20px;
+}
+#career .career__job .job__description p {
+  line-height: 24px;
+}
+#career .career__job .job__description p + p {
+  margin-top: 16px;
+}
+
+#projects .section-title::after {
+  width: 344px;
+}
+#projects .projects__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 20px;
+  margin-top: 40px;
+}
+#projects .project {
+  padding: 16px;
+  background: #3A3A73;
+  border-radius: 12px;
+}
+#projects .project .project__cover {
+  height: 220px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+#projects .project .project__cover img {
+  height: 220px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects .project .project__cover .project__cover__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(58, 58, 115, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#projects .project .project__cover .project__cover__overlay > * {
+  transform: translateY(16px);
+  transition: transform 0.3s ease-in-out;
+}
+#projects .project .project__cover .project__cover__overlay:hover {
+  opacity: 1;
+}
+#projects .project .project__cover .project__cover__overlay:hover > * {
+  transform: translateY(0);
+}
+#projects .project .project__cover .project__cover__overlay i {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #FFFFFF;
+}
+#projects .project .project__cover .project__cover__overlay span {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+#projects .project .project__title {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+#projects .project .project__description {
+  line-height: 24px;
+  margin-top: 12px;
+}
+
+#contact .section-title::after {
+  width: 344px;
+}
+#contact .contact__text {
+  line-height: 24px;
+  margin-top: 40px;
+}
+#contact .contacts {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+#contact .contacts .contacts__info {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contacts .contacts__info + .contacts__info {
+  margin-left: 40px;
+}
+#contact .contacts .contacts__info .contacts__info__title {
+  font-size: 20px;
+  color: #FA58B6;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+#contact .contacts .contacts__info .contacts__info__title i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(58, 58, 115, 0.3);
+  margin-top: 100px;
+  padding: 0 16px;
+}
+footer .footer__text {
+  color: rgba(209, 209, 217, 0.5);
+  display: flex;
+  align-items: center;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
