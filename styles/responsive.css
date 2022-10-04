@@ -1,0 +1,55 @@
+@media (max-width: 600px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    -moz-column-gap: 64px;
+         column-gap: 64px;
+    row-gap: 20px;
+  }
+  .menu .menu__item + .menu__item {
+    margin-left: 0;
+  }
+  .hero .hero__title {
+    align-items: center;
+    text-align: center;
+  }
+  .hero .hero__actions {
+    align-self: center;
+    justify-content: center;
+  }
+  .hero .hero__actions .hero__button {
+    padding: 0 24px;
+  }
+  #about .about__skills {
+    grid-template-columns: 1fr;
+  }
+  #career .section-title::after {
+    width: 224px;
+  }
+  #career .career__job .job__header {
+    flex-direction: column;
+  }
+  #career .career__job .time {
+    margin-top: 24px;
+  }
+  #career .career__job .job__description {
+    margin-top: 40px;
+  }
+  #projects .section-title::after {
+    width: 224px;
+  }
+  #projects .projects__gallery {
+    grid-template-columns: 1fr;
+  }
+  #contact .section-title::after {
+    width: 224px;
+  }
+  #contact .contacts {
+    flex-direction: column;
+  }
+  #contact .contacts .contacts__info + .contacts__info {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

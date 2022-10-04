@@ -51,6 +51,10 @@ body {
   bottom: -12px;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+}
 .hero .hero__title {
   display: flex;
   flex-direction: column;
