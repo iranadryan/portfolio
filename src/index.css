@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7a0bc0;
+  --color-secondary: #fa58b6;
+  --color-light-gray: #d1d1d9;
+  --color-dark-bg: #1a1a40;
+  --color-element-bg: #3a3a73;
+
+  --font-mono: "Fira Code", monospace;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-dark-bg);
+  color: var(--color-light-gray);
+}
