@@ -8,14 +8,16 @@ import { Projects } from "./components/Projects";
 
 export function App() {
   return (
-    <div className="px-4 w-full max-w-[992px] mx-auto pt-14">
-      <Navbar />
-      <Hero />
-      <About />
-      <Career />
-      <Projects />
-      <Contact />
+    <>
+      <div className="px-4 w-full max-w-[992px] mx-auto pt-14">
+        <Navbar />
+        <Hero />
+        <About />
+        <Career />
+        <Projects />
+        <Contact />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
